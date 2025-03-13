@@ -1,0 +1,207 @@
+@import '../../../scss/main.scss';
+
+.container {
+    padding: 31px 22px 16px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-radius: 30px;
+    background: $base-black-300;
+
+    @include respond-to(mobile) {
+        padding: 21.91px 39.84px 80px 39.16px;
+        margin-bottom: 50%;
+        border-radius: 14.87px;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-gap: 20px;
+    }
+
+    @include respond-to(tablet) {
+        padding: 31.45px 15.65px 36.73px 46.94px;
+        overflow: hidden;
+    }
+
+    @include respond-to(desktop) {
+        padding: 44.22px 22px 51.8px 66px;
+        overflow: hidden;
+    }
+
+    .info {
+        @include respond-to(mobile) {
+            text-align: center;
+        }
+
+        .title {
+            font-family: $font-poppins-semibold;
+            color: white;
+
+            @include respond-to(mobile) {
+                margin-bottom: 5.93px;
+                font-size: 22.3px;
+                line-height: 28.99px;
+                letter-spacing: 0.22px;
+            }
+
+            @include respond-to(tablet) {
+                margin-bottom: 8.12px;
+                font-size: 32px;
+                line-height: 41.6px;
+                letter-spacing: 0.32px;
+            }
+
+            @include respond-to(desktop) {
+                margin-bottom: 12.48px;
+                font-size: 45px;
+                line-height: 58.5px;
+                letter-spacing: 0.45px;
+            }
+        }
+
+        .subtitle {
+            color: $base-gray-500;
+            font-family: $font-poppins-regular;
+            opacity: 0.6;
+
+            @include respond-to(mobile) {
+                font-size: 10.04px;
+                line-height: 13.05px;
+                letter-spacing: 0.1px;
+            }
+
+            @include respond-to(tablet) {
+                font-size: 14.41px;
+                line-height: 18.74px;
+                letter-spacing: 0.14px;
+            }
+
+            @include respond-to(desktop) {
+                font-size: 20.27px;
+                line-height: 26.35px;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+    .buttonsWrapper {
+        display: flex;
+
+        @include respond-to(mobile) {
+            margin-top: 25.08px;
+            font-size: 10.58px;
+            gap: 15.12px;
+            justify-content: center;
+        }
+
+        @include respond-to(tablet) {
+            margin-top: 35.65px;
+            font-size: 15.2px;
+            gap: 21.7px;
+        }
+
+        @include respond-to(desktop) {
+            margin-top: 50.84px;
+            font-size: 21.36px;
+            gap: 30.51px;
+        }
+
+        button {
+            border-radius: 12.2px;
+
+            @include respond-to(mobile) {
+                border-radius: 6.05px;
+                padding: 9.83px 12.86px;
+                line-height: 13.76px;
+                letter-spacing: 0.11px;
+            }
+
+            @include respond-to(tablet) {
+                border-radius: 8.69px;
+                padding: 14.12px 18.16px;
+                line-height: 19.77px;
+                letter-spacing: 0.15px;
+            }
+
+            @include respond-to(desktop) {
+                border-radius: 12.2px;
+                line-height: 27.76px;
+                letter-spacing: 0.21px;
+                font-size: 21.36px;
+            }
+        }
+    }
+
+    .imageWrapper {
+        position: absolute;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 30px;
+            right: 0;
+            box-shadow: $box-shadow-image;
+            background: $base-white-100;
+            filter: blur(18.8px);
+            z-index: -1;
+            opacity: 0.2;
+
+            @include respond-to(mobile) {
+                left: 0;
+                width: 105%;
+                height: 105%;
+            }
+            @include respond-to(tablet) {
+                left: -20px;
+                width: 100%;
+                height: 80%;
+            }
+
+            @include respond-to(desktop) {
+                width: 105%;
+                height: 80%;
+                z-index: 0;
+            }
+        }
+
+        @include respond-to(mobile) {
+            bottom: -80%;
+            left: 50%;
+            width: 85%;
+            min-height: 137px;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+
+        @include respond-to(tablet) {
+            top: 22.05px;
+            right: 22.05px;
+            bottom: 22.05px;
+            left: auto;
+            height: 177.08px;
+            width: 262.43px;
+            z-index: 0;
+        }
+
+        @include respond-to(desktop) {
+            top: 31px;
+            right: 31px;
+            bottom: 31px;
+            width: 369px;
+            height: 249px;
+        }
+
+        img {
+            object-fit: cover;
+            @include respond-to(mobile) {
+                border-radius: 9.2px;
+            }
+
+            @include respond-to(tablet) {
+                border-radius: 11.23px;
+            }
+
+            @include respond-to(desktop) {
+                border-radius: 15.79px;
+            }
+        }
+    }
+}
