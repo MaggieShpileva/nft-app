@@ -1,0 +1,75 @@
+@import '../../../scss/main.scss';
+
+.headerWrapper {
+    position: relative;
+    background: $base-white-300;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    @include respond-to(mobile) {
+        padding: 30px 30px 30px 28px;
+    }
+
+    @include respond-to(tablet) {
+        padding: 32px 68.16px 32px 66.15px;
+    }
+    @include respond-to(desktop) {
+        padding: 40px 95px 40px 94px;
+    }
+
+    .container {
+        display: grid;
+        align-items: center;
+
+        @include respond-to(mobile) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include respond-to(tablet) {
+            grid-template-columns: 50px 1fr 200px;
+            gap: 10.26px;
+        }
+        @include respond-to(desktop) {
+            grid-template-columns: 80px 1fr 230px;
+            gap: 14.25px;
+        }
+
+        .logoWrapper {
+            display: flex;
+            align-items: center;
+            gap: 7.05px;
+
+            .icon {
+                @include respond-to(mobile) {
+                    width: 46.41px;
+                    height: 46.41px;
+                }
+
+                @include respond-to(tablet) {
+                    width: 37.69px;
+                    height: 37.69px;
+                }
+
+                @include respond-to(desktop) {
+                    width: 53px;
+                    height: 53px;
+                }
+            }
+
+            .name {
+                color: $base-black-100;
+                font-size: 21.36px;
+                font-family: $font-poppins-semibold;
+                line-height: 27.77px;
+
+                @include respond-to(tablet) {
+                    display: none;
+                }
+
+                @include respond-to(desktop) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

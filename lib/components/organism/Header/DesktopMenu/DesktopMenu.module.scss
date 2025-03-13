@@ -1,0 +1,63 @@
+@import '../../../../scss/main.scss';
+
+.menu {
+    display: flex;
+    text-transform: uppercase;
+    color: $base-gray-600;
+
+    @include respond-to(mobile) {
+        display: none;
+    }
+
+    @include respond-to(tablet) {
+        font-size: 12.68px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 19.02px;
+    }
+
+    @include respond-to(desktop) {
+        font-size: 17.83px;
+        font-weight: 500;
+        line-height: 26.74px;
+    }
+
+    li {
+        cursor: pointer;
+
+        @include respond-to(tablet) {
+            padding: 10px 19.02px;
+        }
+
+        @include respond-to(desktop) {
+            padding: 10px 26.74px;
+        }
+
+        &:hover {
+            color: $base-black-300;
+        }
+    }
+}
+
+.connectButton {
+    text-transform: uppercase;
+    font-weight: 600;
+
+    @include respond-to(mobile) {
+        display: none;
+    }
+
+    @include respond-to(tablet) {
+        padding: 11.5px 17.25px;
+        font-size: 11.5px;
+        line-height: 17.25px;
+    }
+
+    @include respond-to(desktop) {
+        padding: 16.17px 24.26px;
+        font-size: 16.17px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 24.26px;
+    }
+}
