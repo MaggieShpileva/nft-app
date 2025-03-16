@@ -1,0 +1,196 @@
+@import '../../../scss/main.scss';
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 74px 0;
+    display: flex;
+
+    @include container-center;
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        padding: 74px 28px 119.46px;
+    }
+
+    @include respond-to(tablet) {
+        flex-direction: row;
+        padding: 80px 69.99px 116.91px;
+    }
+
+    @include respond-to(desktop) {
+        padding: 111.89px 97px 165px;
+        overflow: visible;
+    }
+
+    .info {
+        @include respond-to(mobile) {
+            margin-bottom: 105px;
+            width: 100%;
+            text-align: center;
+        }
+
+        @include respond-to(tablet) {
+            width: 60%;
+        }
+
+        @include respond-to(desktop) {
+            width: 45%;
+        }
+
+        .title {
+            color: $base-black-300;
+            font-family: $font-poppins-semibold;
+            text-transform: capitalize;
+
+            @include respond-to(mobile) {
+                margin-bottom: 9.87px;
+                font-size: 47.4px;
+                line-height: 56.88px;
+            }
+
+            @include respond-to(tablet) {
+                margin-bottom: 11.39px;
+                font-size: 53.34px;
+                line-height: 64.01px;
+            }
+
+            @include respond-to(desktop) {
+                margin-bottom: 16px;
+                font-size: 75px;
+                line-height: 90px;
+            }
+        }
+
+        .subtitle {
+            color: $base-black-300;
+            font-weight: 400;
+            text-wrap: balance;
+
+            @include respond-to(mobile) {
+                margin-bottom: 42.15px;
+                font-size: 11.38px;
+                line-height: 17.7px;
+            }
+
+            @include respond-to(tablet) {
+                margin-bottom: 31.82px;
+                font-size: 12.8px;
+                line-height: 19.91px;
+            }
+
+            @include respond-to(desktop) {
+                margin-bottom: 45px;
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            span {
+                color: $base-black-300;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .buttonWrapper {
+        button {
+            @include respond-to(mobile) {
+                font-size: 11.66px;
+                letter-spacing: 0.12px;
+
+                &:first-child {
+                    padding: 15px 21px;
+
+                    margin-right: 17px;
+                }
+
+                &:last-child {
+                    padding: 15px;
+                }
+            }
+
+            @include respond-to(tablet) {
+                font-size: 11.57px;
+                letter-spacing: 0.12px;
+
+                &:first-child {
+                    padding: 12.8px 20.62px;
+                    margin-right: 16.35px;
+                }
+
+                &:last-child {
+                    padding: 12.8px 14.94px;
+                }
+            }
+
+            @include respond-to(desktop) {
+                font-size: 16.27px;
+                letter-spacing: 0.16px;
+
+                &:first-child {
+                    padding: 18px 30 18px 29px;
+                    margin-right: 23px;
+                }
+
+                &:last-child {
+                    padding: 19.2px 23.6px;
+                }
+            }
+        }
+    }
+
+    .metricContainer {
+        align-items: center;
+
+        @include respond-to(mobile) {
+            display: none;
+        }
+        @include respond-to(tablet) {
+            margin-top: 58.32px;
+            display: flex;
+            gap: 46.35px;
+        }
+
+        @include respond-to(desktop) {
+            margin-top: 82px;
+            display: flex;
+            gap: 65.28px;
+        }
+
+        .metric {
+            font-weight: 600;
+            color: $base-black-300;
+
+            .metricTitle {
+                @include respond-to(tablet) {
+                    margin-bottom: 3.93px;
+                    font-size: 26.15px;
+                    line-height: 32.69px;
+                }
+
+                @include respond-to(desktop) {
+                    margin-bottom: 5.92px;
+                    font-size: 36.77px;
+                    line-height: 45.96px;
+                }
+            }
+
+            .metricValue {
+                font-weight: 500;
+                color: $base-black-900;
+
+                @include respond-to(mobile) {
+                }
+                @include respond-to(tablet) {
+                    font-size: 8.72px;
+                    line-height: 13.08px;
+                }
+
+                @include respond-to(desktop) {
+                    font-size: 12.26px;
+                    line-height: 18.39px;
+                }
+            }
+        }
+    }
+}

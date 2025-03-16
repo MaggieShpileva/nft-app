@@ -18,3 +18,22 @@
         }
     }
 }
+
+@mixin container-center {
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    @media (max-width: 1023px) {
+        min-width: 375px;
+        padding: 0 27px 0 30px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        padding: 0 69.59px 0 68.99px;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 1440px;
+        padding: 0 98px 0 97px;
+    }
+}

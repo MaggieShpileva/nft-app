@@ -1,12 +1,41 @@
-@import '../../../scss/main.scss';
+@use '../../../scss/main.scss' as *;
 
 .container {
     padding: 30px 0;
     min-width: 375px;
-    max-width: 1440px;
     background: $base-gray-400;
     overflow: hidden;
 
+    @include respond-to(mobile) {
+        padding: 57px 0 55.61px;
+    }
+
+    @include respond-to(tablet) {
+        padding: 49.78px 0 64.02px;
+    }
+
+    @include respond-to(desktop) {
+        padding: 70px 0 90.01px;
+    }
+
+    .title {
+        color: $base-white-400;
+        font-family: $font-poppins-semibold;
+        text-align: center;
+
+        @include respond-to(mobile) {
+            line-height: 26.92px;
+            font-size: 30px;
+        }
+        @include respond-to(tablet) {
+            font-size: 32px;
+            line-height: 19.14px;
+        }
+        @include respond-to(desktop) {
+            font-size: 45px;
+            line-height: 26.92px;
+        }
+    }
     .buttonsWrapper {
         margin: auto;
         position: relative;
@@ -47,9 +76,4 @@
             transform: scaleX(-1);
         }
     }
-}
-
-:global(.slick-track) {
-    display: flex;
-    margin: 100px auto 114.72px;
 }

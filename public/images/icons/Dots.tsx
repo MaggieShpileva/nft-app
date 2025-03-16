@@ -1,0 +1,13 @@
+import { SVGProps } from 'react';
+
+const Dots: React.FC<SVGProps<SVGSVGElement>> = (props) => (
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 285" {...props}>
+        <path
+            d="M.8 148.2h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 161.6h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 175.1h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 188.6h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 202.1h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 215.5h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 229h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 242.5h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 255.9h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 269.4h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 282.9h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8.7h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zM68 .7h2v2h-2zm13.4 0h2v2h-2zM.8 14.1h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 27.6h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 41.1h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 54.5h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 68h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zM68 68h2v2h-2zm13.4 0h2v2h-2zM.8 81.5h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 94.9h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 108.4h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 121.9h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zM.8 135.3h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2zm13.4 0h2v2h-2zm13.5 0h2v2h-2zm13.4 0h2v2h-2z"
+            opacity=".5"
+            fill="#000"
+        />
+    </svg>
+);
+
+export default Dots;

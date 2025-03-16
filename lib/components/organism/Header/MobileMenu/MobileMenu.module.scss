@@ -6,6 +6,7 @@
 
     @include respond-to(mobile) {
         display: block;
+        z-index: 100;
     }
 
     .menuButton {
@@ -28,7 +29,6 @@
         flex-direction: column;
         background: $base-white-300;
         opacity: 0;
-
         transition: left 0.5s ease-out, opacity 0.3s ease-out, top 0.4s ease-out;
     }
 
@@ -48,7 +48,6 @@
         font-weight: 500;
         text-transform: uppercase;
         line-height: 42px;
-        border-top: 1px $base-gray-300 solid;
 
         li {
             cursor: pointer;

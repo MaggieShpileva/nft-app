@@ -1,53 +1,35 @@
 @import '../../../scss/main.scss';
 
 .primary {
-    // Layout
     padding: 18px 30px 18px 29px;
-
-    // Border
     border: $base-black-100 1.5px solid;
     border-radius: 12.41px;
-
-    // Background and Color
     background: $base-black-200;
     color: white;
-
-    // Typography
     font-family: $font-poppins-regular;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.16px;
 
-    // Hover state
     &:hover {
         background: $base-gray-200;
         color: $base-black-100;
     }
-
-    // Active state
     &:active {
         background-color: $base-black-200;
     }
 }
 
 .secondary {
-    // 1. Layout
     padding: 19.83px 25.53px;
-
-    // 2. Background and Color
     background: $base-gray-100;
     color: $base-black-300;
-
-    // 3. Border
     border-radius: 19.83px;
     border: $base-gray-100 2.29px solid;
-
-    // 4. Typography
     font-weight: 600;
     line-height: 27.76px;
     letter-spacing: 0.21px;
 
-    // 5. Hover state
     &:hover {
         background: $base-gray-200;
         color: $base-black-400;
@@ -59,62 +41,46 @@
 }
 
 .tertiary {
-    // Layout
     padding: 18px 21px;
-
-    // Border
     border-radius: 12.41px;
     border: $base-black-100 1.5px solid;
-
-    // Typography
     color: $base-black-100;
     font-family: $font-poppins-medium;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.16px;
 
-    // Hover state
     &:hover {
         background: $base-black-100;
         color: $base-white-100;
     }
 
-    // Active state
     &:active {
         background: $base-gray-100;
     }
 }
 
 .quinary {
-    // Layout
     padding: 19.83px 30.53px;
-
-    // Border
     border-radius: 12.2px;
     border: $base-white-100 2.29px solid;
-
-    // Typography
     color: $base-white-100;
-
     font-family: $font-poppins-medium;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.16px;
 
-    // Hover state
     &:hover {
         background: $base-white-100;
         color: $base-black-200;
     }
 
-    // Active state
     &:active {
         background: $base-gray-100;
     }
 }
 
-.button_wrapper {
-    // Transition
+.buttonWrapper {
     transition: all 0.3s linear;
     text-wrap-mode: nowrap;
 }

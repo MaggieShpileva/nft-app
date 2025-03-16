@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Import: React
  */
@@ -23,15 +25,15 @@ import styles from './Slider.module.scss';
  * Import: Assets
  */
 import ArrowIcon from '@/public/images/icons/ArrowIcon';
+import { sliderSettings } from './settings';
 
 type SliderProps = {
     items: CardList;
 };
 export const Slider: FC<SliderProps> = ({ items }) => {
     const settings = {
-        infinite: true,
-        slidesToShow: 5,
-        swipeToSlide: true,
+        className: styles.slider,
+        ...sliderSettings,
     };
 
     const sliderRef = useRef<SlickSlider | null>(null);
@@ -49,8 +51,9 @@ export const Slider: FC<SliderProps> = ({ items }) => {
     };
     return (
         <section className={styles.container}>
+            <h2 className={styles.title}>Weekly - Top NFT</h2>
             <SlickSlider {...settings} ref={sliderRef}>
-                {items.map((card) => (
+                {items.map((card, index) => (
                     <Card
                         imageUrl={card.imageUrl}
                         bid={card.bid}

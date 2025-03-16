@@ -29,7 +29,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export const Button: FC<ButtonProps> = ({ buttonType, children, onClick, className, ...props }) => (
     <button
-        className={classNames(className, styles.button_wrapper, styles[buttonType])}
+        className={classNames(className, styles.buttonWrapper, styles[buttonType])}
         onClick={onClick}
         {...props}
     >

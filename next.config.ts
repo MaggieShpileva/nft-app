@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
     /* config options here */
     sassOptions: {
         includePaths: ['./'],
-        prependData: `@import "~@styles/style.scss";`,
     },
 };
 
