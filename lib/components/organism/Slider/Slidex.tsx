@@ -36,6 +36,7 @@ type SliderProps = {
 };
 export const Slider: FC<SliderProps> = ({ items }) => {
     const [activeSlide, setActiveSlide] = useState(0);
+
     const settings = {
         className: styles.slider,
         ...sliderSettings,

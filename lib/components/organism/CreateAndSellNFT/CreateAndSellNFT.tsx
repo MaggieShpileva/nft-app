@@ -30,7 +30,7 @@ export const CreateAndSellNFT = () => (
                 </div>
             </div>
             <div className={styles.imageWrapper}>
-                <Image src="/images/cards/photo-2.png " alt="Create and sell NFTs" fill />
+                <Image src="/images/cards/photo-2.png" alt="Create and sell NFTs" fill />
             </div>
         </div>
     </section>

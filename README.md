@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NFT
 
-## Getting Started
+## Технологии
 
-First, run the development server:
+Этот проект использует следующие технологии:
+
+-   **[Next.js 15](https://nextjs.org/)** — фреймворк для разработки универсальных React-приложений.
+-   **[Storybook](https://storybook.js.org/)** — инструмент для разработки и тестирования компонентов UI в изоляции.
+-   **[TypeScript](https://www.typescriptlang.org/)** — строгий синтаксис для JavaScript, который помогает избежать множества ошибок на стадии разработки.
+-   **[Framer Motion](https://www.framer.com/motion/)** — библиотека для создания анимаций и переходов в React-приложениях.
+-   **[SCSS](https://sass-lang.com/)** — расширение CSS, которое упрощает написание стилей с использованием переменных, вложенности и других удобных возможностей.
+-   **Адаптивная верстка** — проект использует медиазапросы и гибкие контейнеры для обеспечения корректного отображения на различных устройствах, включая мобильные телефоны, планшеты и десктопы. Это позволяет интерфейсу динамически подстраиваться под разные размеры экранов и улучшать пользовательский опыт на всех типах устройств.
+
+## Верстка
+
+Проект выполнен по макету
+https://www.figma.com/design/EFgafbuotmHC2Mq651AdEf/NFTS-app?m=auto&t=p92DTDM3QWfc1TRO-6
+
+## Deploy
+
+Приложение развернуто и доступно по следующему адресу:
+
+[https://nft-app-maggieshpilevas-projects.vercel.app/](https://nft-app-maggieshpilevas-projects.vercel.app/)
+
+## Установка и запуск
+
+Чтобы запустить проект локально, выполните следующие шаги:
+
+### 1. Клонировать репозиторий
+
+```bash
+git https://github.com/MaggieShpileva/nft-app.git
+cd nft-app
+```
+
+### 2. Установить зависимости
+
+```bash
+npm install
+
+# или
+
+yarn install
+```
+
+### 3. Запустить сервер разработки
 
 ```bash
 npm run dev
-# or
+
+# или
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Запуск Storybook (для разработки компонентов)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run storybook
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# или
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+yarn storybook
+```
