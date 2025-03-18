@@ -1,0 +1,127 @@
+@import '../../../scss/main.scss';
+
+.container {
+    width: calc(100% + 120px);
+    min-width: 375px;
+    max-width: 780px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    aspect-ratio: 1/1;
+
+    @include respond-to(mobile) {
+        max-height: 300px;
+    }
+
+    @media screen and (min-width: 680px) and (max-width: 1024px) {
+        width: 555px;
+        margin: auto;
+    }
+
+    @include respond-to(tablet) {
+        min-width: 555px;
+        max-height: 386px;
+        left: 150px;
+    }
+
+    @include respond-to(desktop) {
+        max-height: 543px;
+        left: 180px;
+    }
+
+    .imageWrapper {
+        width: 100%;
+        position: relative;
+        padding: 10px;
+        aspect-ratio: 1/1;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            background: url('../../../../public/images/cards/photo-2.png') 100% 100%;
+            border-radius: 9.2px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            filter: blur(18.8px);
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 11.92px;
+            aspect-ratio: 1 / 1;
+        }
+    }
+
+    .firstImage {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .secondImage {
+        grid-column: 3/5;
+        grid-row: -1;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .arrow {
+        position: relative;
+        top: 10px;
+        grid-column: 3/4;
+        grid-row: -2;
+
+        @include respond-to(tablet) {
+            width: 91.59px;
+            height: 88.35px;
+        }
+
+        @include respond-to(desktop) {
+            width: 126.78px;
+            height: 124.22px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .dots {
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        z-index: -1;
+
+        @include respond-to(mobile) {
+            width: 92.25px;
+            height: 213.1px;
+            transform: translateX(-75%);
+        }
+
+        @media screen and (min-width: 680px) and (max-width: 1024px) {
+            width: 150px;
+            height: 250px;
+            transform: translateX(-20px);
+        }
+
+        @include respond-to(tablet) {
+            top: -25px;
+            width: 123.04px;
+            height: 384.23px;
+            transform: translateX(-30%);
+        }
+        @include respond-to(desktop) {
+            top: -15px;
+            width: 173px;
+            height: 399.65px;
+            transform: translateX(-30%);
+        }
+    }
+}

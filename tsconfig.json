@@ -21,7 +21,6 @@
         ],
         "paths": {
             "@/*": ["./*"],
-            "@styles": ["./lib/scss/main.scss"],
             "@components/*": ["./lib/components/*"]
         }
     },

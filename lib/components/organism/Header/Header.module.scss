@@ -1,10 +1,16 @@
 @import '../../../scss/main.scss';
 
-.headerWrapper {
-    position: relative;
-    background: $base-white-300;
+.wrapper {
+    margin: auto;
+    max-width: 1440px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $base-white-100;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    z-index: 100;
 
     @include respond-to(mobile) {
         padding: 30px 30px 30px 28px;
@@ -13,11 +19,13 @@
     @include respond-to(tablet) {
         padding: 32px 68.16px 32px 66.15px;
     }
+
     @include respond-to(desktop) {
         padding: 40px 95px 40px 94px;
     }
 
     .container {
+        position: relative;
         display: grid;
         align-items: center;
 

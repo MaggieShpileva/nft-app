@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Poppins } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
+import Header from '@/lib/components/organism/Header';
+import Footer from '@/lib/components/organism/Footer';
 
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
+const interSans = Inter({
+    variable: '--font-inter',
     subsets: ['latin'],
 });
 
@@ -24,8 +21,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                {children}
+            <body className={`${interSans.variable} antialiased`}>
+                <Header />
+                <main>{children}</main>
+                <Footer />
             </body>
         </html>
     );

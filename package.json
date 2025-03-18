@@ -12,13 +12,15 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "framer-motion": "^12.5.0",
     "next": "15.2.2",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-slick": "^0.30.3",
     "sass": "^1.85.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.5"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.5",

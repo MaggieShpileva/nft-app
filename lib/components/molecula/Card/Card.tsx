@@ -8,7 +8,7 @@ import Image from 'next/image';
 /**
  * Import: React
  */
-import { FC } from 'react';
+import { FC, MouseEvent } from 'react';
 
 /**
  * Import: Components
@@ -40,18 +40,21 @@ import styles from './Card.module.scss';
  */
 import classNames from 'classnames';
 
-type CardProps = {
+type CardProps = React.HTMLProps<HTMLDivElement> & {
     time: number; // Время в секундах
     imageUrl: string;
     title: string;
     bid: number;
 };
 
-export const Card: FC<CardProps> = ({ time, imageUrl, title, bid }) => {
+export const Card: FC<CardProps> = ({ time, imageUrl, title, bid, ...props }) => {
     const { remainingTime, formatTime } = useTimer({ time });
 
+    const handleClick = (event: MouseEvent<HTMLElement>) => {
+        event.stopPropagation();
+    };
     return (
-        <article className={classNames(styles.cardWrapper)}>
+        <article className={classNames(styles.cardWrapper)} {...props} onClick={handleClick}>
             <div className={styles.imageWrapper}>
                 <div className={styles.timer}>{formatTime(remainingTime)}</div>
                 <Image src={imageUrl} alt="card image" width={300} height={300} />

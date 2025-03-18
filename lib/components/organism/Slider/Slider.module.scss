@@ -1,55 +1,105 @@
-@import '../../../scss/main.scss';
+@use '../../../scss/main.scss' as *;
 
 .container {
     padding: 30px 0;
     min-width: 375px;
-    max-width: 1440px;
     background: $base-gray-400;
     overflow: hidden;
 
-    .buttonsWrapper {
+    .wrapper {
         margin: auto;
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 166px;
-        height: 68.99px;
-        border-radius: 17.25px;
-        box-shadow: $box-shadow-buttons;
-        background: $base-white-200;
-        overflow: hidden;
+        max-width: 1440px;
 
-        &::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 21px;
-            width: 2.16px;
-            height: 25.87px;
-            transform: translateX(-50%);
-            background: $base-gray-300;
+        @include respond-to(mobile) {
+            padding: 57px 0 55.61px;
         }
 
-        button {
-            padding: 21.56px;
-            transition: all 0.2s ease;
+        @include respond-to(tablet) {
+            padding: 49.78px 0 64.02px;
+        }
 
-            &:hover {
+        @include respond-to(desktop) {
+            padding: 70px 0 90.01px;
+        }
+
+        .title {
+            color: $base-white-400;
+            font-family: $font-poppins-semibold;
+            text-align: center;
+
+            @include respond-to(mobile) {
+                line-height: 26.92px;
+                font-size: 30px;
+            }
+
+            @include respond-to(tablet) {
+                font-size: 32px;
+                line-height: 19.14px;
+            }
+
+            @include respond-to(desktop) {
+                font-size: 45px;
+                line-height: 26.92px;
+            }
+        }
+
+        .sliderWrapper {
+            display: flex;
+            align-items: center;
+
+            @include respond-to(mobile) {
+                width: fit-content !important;
+                gap: 0 14.65px;
+            }
+
+            @include respond-to(tablet) {
+                gap: 0 14.17px;
+            }
+
+            @include respond-to(desktop) {
+                gap: 0 19.92px;
+            }
+        }
+
+        .buttonsWrapper {
+            margin: auto;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 166px;
+            height: 68.99px;
+            border-radius: 17.25px;
+            box-shadow: $box-shadow-buttons;
+            background: $base-white-200;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 21px;
+                width: 2.16px;
+                height: 25.87px;
+                transform: translateX(-50%);
                 background: $base-gray-300;
             }
 
-            &:active {
-                background: $base-gray-100;
+            button {
+                padding: 21.56px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: $base-gray-300;
+                }
+
+                &:active {
+                    background: $base-gray-100;
+                }
+            }
+
+            .nextButton {
+                transform: scaleX(-1);
             }
         }
-
-        .nextButton {
-            transform: scaleX(-1);
-        }
     }
-}
-
-:global(.slick-track) {
-    display: flex;
-    margin: 100px auto 114.72px;
 }
