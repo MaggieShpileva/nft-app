@@ -10,13 +10,11 @@
     box-shadow: $box-shadow-card;
 
     @include respond-to(mobile) {
-        width: 198.49px;
-        border-radius: 15px;
         padding: 10px 10px 20px 10px;
+        border-radius: 15px;
     }
 
     @include respond-to(tablet) {
-        width: 199.93px;
     }
 
     .imageWrapper {
@@ -29,6 +27,7 @@
             border-radius: 23.48px;
             object-fit: cover;
             aspect-ratio: 1 / 1;
+            pointer-events: none;
         }
 
         .timer {

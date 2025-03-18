@@ -24,18 +24,19 @@ body {
     @media (min-width: 1440px) {
         padding: 70px 0 90.01px !important;
     }
+}
 
-    .slick-slide {
-        @media (max-width: 1023px) {
-            margin: 0 14.65px;
-        }
+.slick-slide {
+    width: 100%;
+    @media (max-width: 1023px) {
+        margin: 0 14.65px;
+    }
 
-        @media (min-width: 1024px) and (max-width: 1439px) {
-            margin: 0 14.17px;
-        }
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        margin: 0 14.17px;
+    }
 
-        @media (min-width: 1440px) {
-            margin: 0 19.92px;
-        }
+    @media (min-width: 1440px) {
+        margin: 0 19.92px;
     }
 }

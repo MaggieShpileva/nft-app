@@ -1,5 +1,11 @@
 @import '../../../scss/main.scss';
 
+.buttonWrapper {
+    transition: all 0.3s linear;
+    text-wrap-mode: nowrap;
+    cursor: pointer;
+}
+
 .primary {
     padding: 18px 30px 18px 29px;
     border: $base-black-100 1.5px solid;
@@ -78,9 +84,4 @@
     &:active {
         background: $base-gray-100;
     }
-}
-
-.buttonWrapper {
-    transition: all 0.3s linear;
-    text-wrap-mode: nowrap;
 }

@@ -1,3 +1,4 @@
+'use client';
 /**
  * Import: Components
  */
@@ -14,19 +15,47 @@ import { ButtonType } from '../../molecula/Button';
  */
 import styles from './Banner.module.scss';
 
+/**
+ * Import: Animation
+ */
+import { motion } from 'framer-motion';
+
 export const Banner = () => (
     <section className={styles.container}>
         <div className={styles.info}>
-            <h1 className={styles.title}>Discover And Create NFTs</h1>
-            <h4 className={styles.subtitle}>
+            <p className={styles.over}>OVER 1M CREATORS</p>
+            <motion.h1
+                className={styles.title}
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+            >
+                Discover And Create NFTs
+            </motion.h1>
+            <motion.h4
+                className={styles.subtitle}
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+            >
                 Discover, Create and Sell NFTs On Our NFT Marketplace With Over Thousands Of NFTs
                 And Get a <span> $20 bonus.</span>
-            </h4>
-            <div className={styles.buttonWrapper}>
+            </motion.h4>
+            <motion.div
+                className={styles.buttonWrapper}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+            >
                 <Button buttonType={ButtonType.PRIMARY}>Explore More</Button>
                 <Button buttonType={ButtonType.TERTIARY}>create NFT</Button>
-            </div>
-            <div className={styles.metricContainer}>
+            </motion.div>
+            <motion.div
+                className={styles.metricContainer}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 0.6 }}
+            >
                 <div className={styles.metric}>
                     <p className={styles.metricTitle}>430K+</p>
                     <p className={styles.metricValue}>Art Works</p>
@@ -39,7 +68,7 @@ export const Banner = () => (
                     <p className={styles.metricTitle}>87K+</p>
                     <p className={styles.metricValue}>Collections</p>
                 </div>
-            </div>
+            </motion.div>
         </div>
         <BannerImages />
     </section>

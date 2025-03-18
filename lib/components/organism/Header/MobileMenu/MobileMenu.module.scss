@@ -21,21 +21,15 @@
 
     .menuContent {
         padding: 30px 28px 40px;
-        position: absolute;
-        left: 100%;
-        top: 90px;
-        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 75px;
+        width: 100vw;
+        height: calc(100vh - 75px);
         display: flex;
         flex-direction: column;
         background: $base-white-300;
         opacity: 0;
-        transition: left 0.5s ease-out, opacity 0.3s ease-out, top 0.4s ease-out;
-    }
-
-    .open {
-        height: calc(100vh - 130px);
-        left: 0;
-        opacity: 1;
     }
 
     ul {

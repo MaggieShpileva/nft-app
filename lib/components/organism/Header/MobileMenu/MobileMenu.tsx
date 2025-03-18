@@ -7,7 +7,7 @@ import Link from 'next/link';
 /**
  * Import: React
  */
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 
 /**
  * Import: Components
@@ -38,8 +38,12 @@ import TwitterIcon from '@/public/images/icons/TwitterIcon';
  * Import: Libs
  */
 import classNames from 'classnames';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const MobileMenu = () => {
+type MobileMenuProps = {
+    currentBgColor: string;
+};
+const MobileMenu: FC<MobileMenuProps> = ({ currentBgColor }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -56,34 +60,48 @@ const MobileMenu = () => {
                 )}
             </div>
 
-            <div className={classNames(styles.menuContent, isMenuOpen ? styles.open : '')}>
-                <ul>
-                    <li>
-                        <Link href={''}>Discover</Link>
-                    </li>
-                    <li>
-                        <Link href={''}>creators</Link>
-                    </li>
-                    <li>
-                        <Link href={''}>Sell</Link>
-                    </li>
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        className={classNames(styles.menuContent)}
+                        key="menu"
+                        initial={{ opacity: 1, y: '-100%', backgroundColor: currentBgColor }}
+                        animate={{ opacity: 1, y: 0, backgroundColor: currentBgColor }}
+                        exit={{ opacity: 1, y: '-100%' }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                    >
+                        <ul>
+                            <li>
+                                <Link href={''}>Discover</Link>
+                            </li>
+                            <li>
+                                <Link href={''}>creators</Link>
+                            </li>
+                            <li>
+                                <Link href={''}>Sell</Link>
+                            </li>
 
-                    <li>
-                        <Link href={''}>stats</Link>
-                    </li>
-                </ul>
+                            <li>
+                                <Link href={''}>stats</Link>
+                            </li>
+                        </ul>
 
-                <div className={styles.iconsWrapper}>
-                    <InstagramIcon />
-                    <LinkedinIcon />
-                    <FacebookIcon />
-                    <TwitterIcon />
-                </div>
+                        <div className={styles.iconsWrapper}>
+                            <InstagramIcon />
+                            <LinkedinIcon />
+                            <FacebookIcon />
+                            <TwitterIcon />
+                        </div>
 
-                <Button buttonType={ButtonType.PRIMARY} className={styles.mobileConnectButton}>
-                    Connect Wallet
-                </Button>
-            </div>
+                        <Button
+                            buttonType={ButtonType.PRIMARY}
+                            className={styles.mobileConnectButton}
+                        >
+                            Connect Wallet
+                        </Button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };

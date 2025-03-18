@@ -4,9 +4,9 @@ export const sliderSettings = {
     showArrow: false,
     arrows: false,
     focusOnSelect: true,
-    centerMode: true,
     slidesToShow: 7,
-    infinite: true,
+    variableWidth: true,
+    centerMode: true,
     responsive: [
         {
             breakpoint: 480,
@@ -19,7 +19,6 @@ export const sliderSettings = {
             breakpoint: 768,
             settings: {
                 slidesToShow: 3,
-                centerMode: false,
             },
         },
         {
@@ -46,8 +45,8 @@ export const sliderSettings = {
         {
             breakpoint: 1536,
             settings: {
-                slidesToShow: 6,
-                centerMode: false,
+                slidesToShow: 4,
+                centerMode: true,
             },
         },
     ],
